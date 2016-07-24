@@ -154,11 +154,11 @@ def generate_resume(resume_obj):
         new_resume += add_segment(title, text)
     new_resume += resume_end()
     with open('hi.html','wb') as f:
-        new_resume = new_resume.encode('utf-8')
+        new_resume = new_resume.encode('utf-16')
         f.write(new_resume)
     name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
     name += ".pdf"
-    HTML(string=new_resume).write_pdf(name,
+    HTML(string=new_resume).write_pdf("./public/new_resume.pdf",
             stylesheets=[CSS(string='h3{ margin: 0px;  }body { font-family: "Times New Roman" !important }')])        
     return name
 

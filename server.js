@@ -8,6 +8,10 @@ var methodOverride = require('method-override');
 var multer         = require('multer');
 var fs = require("fs");
 
+app.engine('.html', require('ejs').__express);
+app.set('views', __dirname + '/public');
+app.set('view engine', 'html');
+
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -34,7 +38,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
 app.get('/', function (req, res) {
-  res.sendFile('index.html');
+  res.sendFile(__dirname + '/public/home.html');
 });
 
 app.get('/home', function (req, res) {
@@ -46,7 +50,7 @@ app.get('/recipients', function (req, res) {
 });
 
 
-app.post('/home', upload.single("resume.pdf"), function(req,res){
+app.post('/', upload.single("resume.pdf"), function(req,res){
 
   var cmd = 'python code.py '+ './'+req.file.path;
   exec(cmd, function(error, stdout, stderr) {
@@ -64,6 +68,7 @@ app.post('/home', upload.single("resume.pdf"), function(req,res){
 
 
       // DAVID...
+
       res.sendFile(__dirname + "/public/view.html");
     });
   });
