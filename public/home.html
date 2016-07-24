@@ -30,8 +30,8 @@
 
         .login-box{
           font-family: 'Open Sans', sans-serif;
-          color: #303841;
-          font-size: 1.3em;
+          color: white;
+          font-size: 2em;
         }
 
         .login{
@@ -41,21 +41,52 @@
           border-radius: 0.3rem;
           padding: 2rem;
         }
+
+        .test{
+          padding: 3em;
+          width: 100%;
+          display: inline-block;
+          background-color: #DDDDDD;
+        }
+
+        .submit-btn{
+          background-color: #fd5959;
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          font-size: 1.3em;
+          padding: 0.5em;
+
+        }
     </style>
 
-    <div class="nav">  &ltcore/X&gt </div>
+    <div class="nav"><a href="/">  &ltcore/X&gt </a></div>
     <section>
-      <center><div class="input-box"><br><br><br>
-        <div class="btn-group">
+      <center><div class="input-box"><br><br><br><br><br><br>
+        <p  class="login-box"> Let's get your resume coreX'd!</p><br><br>
+        <div class="test">
           <form method="post" enctype="multipart/form-data">
-            <input type="file" name="resume.pdf">
-            <input type="submit" value="Upload Image" name="submit" />
+            <input style="display: inline-block;" type="file" name="resume.pdf">
+            <input class="submit-btn" type="submit" value="Submit!" name="submit" onclick="handleClick()"/>
           </form>
-
       </div>
 
+      <img class="test2" style="display: none" src="./loading.gif" />
       </div></center>
     </section>
+
+
+
+    <script>
+
+      function handleClick(){
+        console.log(document.getElementsByClassName('test'));
+        document.getElementsByClassName('test')[0].style.display= "none";
+        document.getElementsByClassName('test2')[0].style.display= "block";
+      }
+
+    </script>
 
   </body>
 </html>

@@ -41,6 +41,11 @@ app.get('/home', function (req, res) {
   res.sendFile(__dirname + '/public/home.html');
 });
 
+app.get('/recipients', function (req, res) {
+  res.sendFile(__dirname + '/public/recipients.html');
+});
+
+
 app.post('/home', upload.single("resume.pdf"), function(req,res){
 
   var cmd = 'python code.py '+ './'+req.file.path;
@@ -56,11 +61,12 @@ app.post('/home', upload.single("resume.pdf"), function(req,res){
 
       // Elmer, take it from here...
       console.log(response);
+
+
+      // DAVID...
+      res.sendFile(__dirname + "/public/view.html");
     });
   });
-
-
-
 
 
 });

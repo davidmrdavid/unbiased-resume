@@ -1,0 +1,161 @@
+<html>
+  </head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="https://use.fontawesome.com/5585dd5296.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <style>
+        body{
+          padding: 0px;
+          margin: 0px;
+          background-color: #fd5959;
+        }
+       .nav {
+          background-color: black;
+          color: white;
+          padding: 1em;
+          font-size: 1.5em;
+          font-family: "Courier New"
+        }
+
+        .login-box{
+          font-family: 'Open Sans', sans-serif;
+          color: #303841;
+          font-size: 1.3em;
+        }
+
+        .login{
+          height: 25rem;
+          width:  53rem;
+          background-color: #f8f8f8;
+          border-radius: 0.3rem;
+          padding: 2rem;
+        }
+
+        .submit-btn{
+          background-color: #fd5959;
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          font-size: 1.3em;
+          padding: 0.5em;
+
+        }
+
+        .submit-btn{
+          background-color: black;
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          font-size: 1.3em;
+          padding: 0.5em;
+
+        }
+
+        .thumbnail {
+          height: 30rem !important;
+        }
+
+        .row{
+          padding: 2rem !important;
+        }
+    </style>
+
+    <nav class="nav"><a  href="/">  &ltcore/X&gt </a></nav>
+    <section>
+      <center><div class="input-box"><br><br><br>
+
+        <p class="login-box">Select your recipients</p><br><br>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img style="height:50%"src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="...">
+              <div class="caption">
+                <h3>GitHub</h3>
+                <p>Apply to Github</p>
+                <center><p><a id="1" href="#" class="btn btn-primary" role="button" onclick="apply(this)">Apply</a></center>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img style="height:50%"src="https://www.facebookbrand.com/img/fb-art.jpg" alt="...">
+              <div class="caption">
+                <h3>Facebook</h3>
+                <p>Apply to Facebook</p>
+                <center><p><a id="2" href="#" class="btn btn-primary" role="button" onclick="apply(this)">Apply</a></center>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img style="height:50%"src="http://cdn.androidbeat.com/wp-content/uploads/2015/12/google-logo.jpg" alt="...">
+              <div class="caption">
+                <h3>Google</h3>
+                <p>Apply to Google</p>
+                <center><p><a id="3" href="#" class="btn btn-primary" role="button" onclick="apply(this)">Apply</a></center>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img style="height:50%"src="https://secure.assets.tumblr.com/images/logo_page/img_logo_bluebg_2x.png" alt="...">
+              <div class="caption">
+                <h3>Tumblr</h3>
+                <p>Apply to Tumblr</p>
+                <center><p><a id="4" href="#" class="btn btn-primary" role="button" onclick="apply(this)">Apply</a></center>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img style="height:50%"src="https://g.twimg.com/Twitter_logo_blue.png" alt="...">
+              <div class="caption">
+                <h3>Twitter</h3>
+                <p>Apply to Twitter</p>
+                <center><p><a id="5" href="#" class="btn btn-primary" role="button" onclick="apply(this)">Apply</a></center>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img style="height:50%"src="https://qph.ec.quoracdn.net/main-qimg-c73e4e4396325a9e636ad2b94b64601f?convert_to_webp=true" alt="...">
+              <div class="caption">
+                <h3>Palantir</h3>
+                <p>Apply to Palantir</p>
+                <center><p><a id="6" href="#" class="btn btn-primary" role="button" onclick="apply(this)">Apply</a></center>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="submit-btn" name="submit" onclick="handleClick()"><a href="/">Done!</a></button><br><br>
+
+      </div></center>
+    </section>
+
+    <script>
+      function apply(e){
+        console.log(e.parentElement.parentElement.parentElement);
+        e.parentElement.parentElement.parentElement.innerHTML = "<br><br><p><b>You applied!</b<</p>"
+      }
+    </script>
+
+
+  </body>
+</html>
